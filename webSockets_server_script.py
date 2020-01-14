@@ -5,6 +5,7 @@ import datetime
 import random
 import websockets
 
+#prints time and date continuosly
 async def time(websocket, path):
     while True:
         now = datetime.datetime.utcnow().isoformat() + "Z"
