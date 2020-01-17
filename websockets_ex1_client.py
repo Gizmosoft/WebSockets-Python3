@@ -1,5 +1,4 @@
 # WS client example
-
 import asyncio
 import websockets
 
