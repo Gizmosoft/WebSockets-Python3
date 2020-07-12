@@ -4,8 +4,20 @@
         <title>WebSocket demo</title>
     </head>
     <body>
+      <form id="testForm" name="test-form" class="test-form" action="" method="POST">{% csrf_token %}
+        <div class="header">
+          <span>Message</span>
+        </div>
+        <div class="content">
+          <p id="demo"></p>
+          <input id="texting" name="texting" type="text" class="test-text" placeholder="Test here"/>
+        </div>
+        <div class="footer">
+          <input type="submit" value="SEND">
+        </div>
+      </form>
         <script>
-            var ws = new WebSocket("ws://127.0.0.1:5678/"),
+            var ws = new WebSocket("ws://127.0.0.1:8000/"),
                 messages = document.createElement('ul');
             ws.onmessage = function (event) {
                 var messages = document.getElementsByTagName('ul')[0],
