@@ -6,7 +6,7 @@ async def hello():
     uri = "ws://localhost:8765"
     async with websockets.connect(uri) as websocket:
         greet = input("Bot> Hello! Would you want to report any cybercrime? ") #first question, answer in YES/NO
-        if(greet == "Yes"):
+        if(greet == "Yes" or greet== "yes"):
             await websocket.send(greet)
             print(f"User> {greet}")         #send the response
 
